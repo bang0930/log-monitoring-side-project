@@ -7,3 +7,7 @@
 
 # Ignore node_modules just in case
 node_modules/
+
+
+.env
+admin-ui/.env
