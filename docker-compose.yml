@@ -21,6 +21,8 @@ services:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
     networks:
       - elk
+    depends_on:
+      - elasticsearch
 
   kibana:
     image: docker.elastic.co/kibana/kibana:8.11.1
@@ -31,6 +33,8 @@ services:
       - "5601:5601"
     networks:
       - elk
+    depends_on:
+      - elasticsearch
 
 networks:
   elk:
