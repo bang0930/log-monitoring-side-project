@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.boot.WebApplicationType;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.example.logbackend") 
+@ComponentScan(basePackages = "com.example.logbackend")  
 public class LogbackendApplication {
 
     public static void main(String[] args) {
