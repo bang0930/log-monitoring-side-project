@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>localhost:5000</destination>
+    <appender name="FLUENTBIT" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:8800</destination>
         <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="LOGSTASH" />
+        <appender-ref ref="FLUENTBIT" />
     </root>
 
 </configuration>
