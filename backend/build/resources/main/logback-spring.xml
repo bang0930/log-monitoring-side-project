@@ -3,7 +3,12 @@
 
     <appender name="FLUENTBIT" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
         <destination>localhost:8800</destination>
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <timeZone>UTC</timeZone>
+            <fieldNames>
+                <timestamp>@timestamp</timestamp>  <!-- 필드 이름을 Elasticsearch에서 기본으로 인식하는 @timestamp로 변경 -->
+            </fieldNames>
+        </encoder>
     </appender>
 
     <root level="INFO">
